@@ -1,0 +1,10 @@
+{
+  "/api/*":{
+    "target": "https://inphototest.app2u.es",
+    "secure": false,
+    "loglevel": "debug",
+    "changeOrigin": true
+  }
+}
+
+
