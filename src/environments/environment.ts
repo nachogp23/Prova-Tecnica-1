@@ -2,9 +2,13 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+
+//Definitions of constant parameters for all the App
 export const environment = {
   production: false,
-  apiUrl: '/api/photographer/'
+  apiUrl: '/api/photographer/',
+  apiUser: "test@gmail.com",
+  apiPassword: "1234",
 };
 
 

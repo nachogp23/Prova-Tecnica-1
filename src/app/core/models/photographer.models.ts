@@ -1,3 +1,5 @@
+//Model interface for Photograper object
+//Includes all properties present in the objects coming from the API calls
 export interface Photographer {
   id?: number;
   guid?: string;
