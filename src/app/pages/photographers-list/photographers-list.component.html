@@ -1,0 +1,90 @@
+<!--Page to display all photographers on a list,
+  clicking an item redirects the user to the photographer's detail page -->
+<section class="photographers-list">
+  <header class="photographers-list__header">
+    <div class="photographers-list__header__up">
+      <div class="photographers-list__header__up__up">
+        <object
+          class="photographers-list__header__up__up__camera"
+          data="src/images/SVG-files/ic_camera.svg"
+        ></object>
+        <div class="photographers-list__header__up__up__user"></div>
+      </div>
+
+      <div class="photographers-list__header__up__down">
+        <h1>incadaques 2020</h1>
+        <h2>{{hour}}h {{day}}-{{month}}-{{year}}</h2>
+      </div>
+
+    </div>
+
+    <div class="photographers-list__header__down">
+      <div class="photographers-list__header__down__item photographers-list__header__down__item--1">
+        <embed
+          class="photographers-list__header__down__item__icon"
+          src="src/images/SVG-files/ic_camera.svg"
+        >
+      </div>
+      <div class="photographers-list__header__down__item photographers-list__header__down__item--2">
+        <embed
+          class="photographers-list__header__down__item__icon"
+          src="src/images/SVG-files/ic_camera.svg"
+        >
+      </div>
+      <div class="photographers-list__header__down__item photographers-list__header__down__item--3">
+        <embed
+          class="photographers-list__header__down__item__icon"
+          src="src/images/SVG-files/ic_camera.svg"
+        >
+      </div>
+    </div>
+
+  </header>
+
+  <div class="photographers-list__container">
+    <div
+      class="photographers-list__container__item"
+      *ngFor="let photographer of photographers"
+      [routerLink]="['', photographer.id]"
+    >
+      <img
+        class="photographers-list__container__item__img"
+        [src]="photographer.image"
+        alt="No image for {{ photographer.first_name }} {{
+          photographer.last_name
+        }} "
+      />
+      <div class="photographers-list__container__item__text">
+        <p class="photographers-list__container__item__text__name">{{ photographer.first_name }} {{ photographer.last_name }}</p>
+        <embed class="photographers-list__container__item__text__icon" src="src/images/SVG-files/ic_heart.svg">
+      </div>
+    </div>
+  </div>
+
+  <footer class="photographers-list__footer">
+    <div class="photographers-list__footer__item">
+      <embed
+        class="photographers-list__footer__item__icon"
+        src="src/images/SVG-files/ic_camera.svg"
+      >
+    </div>
+    <div class="photographers-list__footer__item">
+      <embed
+        class="photographers-list__footer__item__icon"
+        src="src/images/SVG-files/ic_eye.svg"
+      >
+    </div>
+    <div class="photographers-list__footer__item">
+      <embed
+        class="photographers-list__footer__item__icon"
+        src="src/images/SVG-files/ic_megaphone.svg"
+      >
+    </div>
+    <div class="photographers-list__footer__item">
+      <embed
+        class="photographers-list__footer__item__icon"
+        src="src/images/SVG-files/ic_heart.svg"
+      >
+    </div>
+  </footer>
+</section>

@@ -1,0 +1,28 @@
+<!-- Page to display single photographer info -->
+<header class="navbar">
+<div  class="navbar__container" [routerLink]="['']">
+  <p class="navbar__container__text">back</p>
+  <embed class="navbar__container__icon" src="src/images/SVG-files/ic_back_arrow.svg">
+</div>
+</header>
+
+<div class="photographer-detail">
+
+  <div class="photographer-detail__img">
+    <img [src]="photographer?.image"/>
+  </div>
+
+  <div class="photographer-detail__name">
+    <p>{{photographer!.first_name}} {{photographer!.last_name}}</p>
+  </div>
+
+  <div class="photographer-detail_description">
+    <p>{{photographer?.description}}</p>
+  </div>
+
+</div>
+
+
+
+
+

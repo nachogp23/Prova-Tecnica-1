@@ -1,7 +1,9 @@
-import { ApiService } from './core/services/api.service';
+//-------------------   START DEPENDENCIES   ---------------
+//Import external dependencies
 import { Component } from '@angular/core';
-import { Photographer } from './core/models/photographer.models';
-
+//Import internal dependencies
+import { BrainService } from './core/services/brain.service';
+//-------------------   END DEPENDENCIES   ----------------
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,20 +12,13 @@ import { Photographer } from './core/models/photographer.models';
 export class AppComponent {
   title = 'Prova-Tecnica-1';
 
-  public photographers: Photographer[] = [];
-
-  constructor (
-    private apiService: ApiService
-  ) {
-    console.log("se ejecuta constructor");
-    apiService.getPhotographers().subscribe((photographers) => {
-      this.photographers = photographers;
-    })
-   }
-
-   public showResponse() {
-    console.log(this.photographers);
+  //Start App poblating Local Storage with Api Data
+  constructor (private brain: BrainService)
+  {
+    this.brain.startApp();
   }
 
 }
+
+
 

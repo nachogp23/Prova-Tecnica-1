@@ -1,0 +1,16 @@
+import { PhotographersListComponent } from './photographers-list.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  {
+    path: "",
+    component: PhotographersListComponent
+  }
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class PhotographersListRoutingModule { }
